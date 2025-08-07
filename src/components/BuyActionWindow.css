@@ -1,0 +1,129 @@
+/* Overlay for blur/background dim effect */
+.buy-window-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 999;
+  padding-top: 40px; /* pushes the window downward */
+}
+
+/* Main Window Styling */
+.buy-window {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  animation: fadeInDown 0.4s ease-in-out;
+}
+
+.buy-window-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Input styling */
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+legend {
+  font-size: 0.9rem;
+  padding: 0 8px;
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 8px;
+}
+
+/* Buttons section */
+.buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.margin-info {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+  flex: 1;
+}
+
+.btn-blue {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-grey {
+  background-color: #ccc;
+  color: #333;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transition: 0.3s ease;
+}
+
+/* Animation */
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .buy-window {
+    padding: 20px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
