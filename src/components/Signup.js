@@ -13,7 +13,7 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8080/register", {
+      await axios.post("https://kite-backend-qlhd.onrender.com/register", {
         username,
         email,
         password,

@@ -14,7 +14,7 @@ function Login() {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:8080/login", {
+      const response = await axios.post("https://kite-backend-qlhd.onrender.com/login", {
         email,
         password,
       });

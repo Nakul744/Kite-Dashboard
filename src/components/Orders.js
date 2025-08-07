@@ -16,7 +16,7 @@ const Orders = () => {
           return;
         }
 
-        const response = await axios.get("http://localhost:8080/allorders", {
+        const response = await axios.get("https://kite-backend-qlhd.onrender.com/allorders", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
